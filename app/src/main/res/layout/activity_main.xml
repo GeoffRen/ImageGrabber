@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:textColor="#444444"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="9dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="10dip"
+        android:text="Enter address: "/>
+    <EditText
+        android:id="@+id/imageAddress"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:inputType="text"
+        android:layout_above="@+id/threadButton"
+        android:layout_toEndOf="@+id/prompt" />
+    <Button
+        android:id="@+id/threadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="260dip"
+        android:text="Download Thread"
+        android:layout_below="@+id/prompt"
+        android:layout_toStartOf="@+id/downloadTime" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0,1,2"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mainLayout"
+        android:layout_alignStart="@+id/prompt"
+        android:layout_below="@+id/imageName">
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name"
+        android:id="@+id/imageName"
+        android:layout_below="@+id/threadButton"
+        android:layout_alignStart="@+id/mainLayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time"
+        android:id="@+id/downloadTime"
+        android:layout_above="@+id/mainLayout"
+        android:layout_toEndOf="@+id/prompt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Show"
+        android:id="@+id/image"
+        android:layout_above="@+id/mainLayout"
+        android:layout_alignEnd="@+id/imageAddress" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Service"
+        android:id="@+id/serviceButton"
+        android:layout_above="@+id/downloadTime"
+        android:layout_toEndOf="@+id/downloadTime" />
+
+</RelativeLayout>
